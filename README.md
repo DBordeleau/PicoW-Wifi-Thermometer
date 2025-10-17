@@ -14,9 +14,9 @@ A WiFi-enabled temperature and humidity monitoring system built with the Raspber
 - Physical push button to toggle between Celsius and Fahrenheit
 
 ### Components
-- Raspberry Pi Pico W
-- DHT11 Temperature & Humidity Sensor
-- SH1106 128x64 I2C OLED Display
+- [Raspberry Pi Pico W](https://www.pishop.ca/product/raspberry-pi-pico-w/)
+- [DHT11 Temperature & Humidity Sensor](https://www.amazon.ca/KeeYees-Temperature-Humidity-Single-Bus-Raspberry/dp/B07V5MTQJG/) | [Datasheet](https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf)
+- [SH1106 128x64 I2C OLED Display](https://www.amazon.ca/Communication-Display-Module-SSH1106-Driver/dp/B0CG61J6X4/) | [Datasheet](https://www.pololu.com/file/0J1813/SH1106.pdf)
 - Push button
 - Breadboard and jumper wires
 
