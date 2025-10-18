@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WiFi Thermometer</title>
+    <style>
+        html {
+            font-family: Helvetica;
+            display: inline-block;
+            margin: 0px auto;
+            text-align: center;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 16px 40px;
+            text-decoration: none;
+            font-size: 30px;
+            margin: 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WiFi Thermometer</h1>
+    <p>Temperature: <span id="temperature"></span></p>
+    <p>Humidity: <span id="humidity"></span></p>
+    <button class="button" onclick="toggleTemperatureUnit()">Toggle Celsius/Fahrenheit</button>
+
+    <script>
+        let useCelsius = true;
+
+        function fetchTemperature() {
+            fetch("/temperature")
+                .then(response => response.text())
+                .then(text => {
+                    const data = JSON.parse(text);
+                    let temperature = useCelsius ? data.temperatureC : data.temperatureF;
+                    document.getElementById("temperature").innerText = `${temperature} Degrees ${useCelsius ? 'C' : 'F'}`;
+                    document.getElementById("humidity").innerText = `${data.humidity}%`;
+                });
+        }
+
+        function toggleTemperatureUnit() {
+            useCelsius = !useCelsius;
+            fetchTemperature();
+        }
+
+        setInterval(fetchTemperature, 3000);
+        fetchTemperature();
+    </script>
+</body>
+
+</html>

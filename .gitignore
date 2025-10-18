@@ -1,0 +1,11 @@
+build/
+*.uf2
+
+.vscode/
+.idea/
+*.swp
+
+_deps/
+
+.DS_Store
+Thumbs.db
