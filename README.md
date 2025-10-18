@@ -2,6 +2,8 @@
 
 A WiFi-enabled temperature and humidity monitoring system built with the Raspberry Pi Pico W. Has both an onboard OLED display as well as a web interface. Both are updated every 3 seconds with temperature and humidity readings from a DHT11 sensor. Also features an onboard push button to toggle between fahrenheit and celsius display.
 
+### Video Demo
+
 [![Video Demo](https://img.youtube.com/vi/NePnPrrfUlU/0.jpg)](https://www.youtube.com/watch?v=NePnPrrfUlU)
 
 ## Features
