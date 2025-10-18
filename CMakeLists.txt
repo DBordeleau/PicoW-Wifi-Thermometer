@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
-set(PICO_SDK_PATH "C:/Users/13435/Desktop/pico-sdk")
-set(PICO_EXTRAS_PATH "C:/Users/13435/Desktop/pico-extras")
+set(PICO_SDK_PATH "PATH_TO_YOUR_PICO_SDK")  # Replace with the actual path to your pico-sdk
+set(PICO_EXTRAS_PATH "PATH_TO_YOUR_PICO_EXTRAS")  # Replace with the actual path to your pico-extras
 set(PICO_BOARD pico_w)
 
 include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)
